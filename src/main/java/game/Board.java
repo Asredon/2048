@@ -15,8 +15,8 @@ public class Board {
     private int[][] tiles;
 
     public Board(int x, int y){
-        if (x < 4 || y < 4) {
-            throw new AssertionError("The board cannot be smaller than 4x4");
+        if (x < 4 || y < 4 || x != y) {
+            throw new AssertionError("The board cannot be smaller than 4x4 and x has to have the same value as y");
         }
         this.x = x;
         this.y = y;
@@ -235,7 +235,7 @@ public class Board {
     }
 
     public int getHighScore() {
-        return highScore;
+        return this.highScore;
     }
 
     public void printBoard(){
