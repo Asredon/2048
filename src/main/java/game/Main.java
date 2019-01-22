@@ -10,23 +10,13 @@ public class Main {
     public static void main(String [] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String line;
-        Board gameBoard = new Board(4,4);
-        gameBoard.addTile();
-        gameBoard.printBoard();
+        final Board gameBoard = new Board(4,4);
         System.out.println("up = e , left = s , down = d , right = f , restart game = r");
+        gameBoard.printBoard();
         while(!gameBoard.isWin()) {
-            if (gameBoard.isWin()){
-                System.out.println("You won!!!");
-            } else if (gameBoard.isLose()){
-                System.out.println("You lost, try again with pressing r");
-            }
             line = br.readLine();
             if (line.charAt(0) == 'r') {
-                gameBoard = new Board(4, 4);
-                gameBoard.isWin();
-                gameBoard.isLose();
-                gameBoard.addTile();
-                gameBoard.printBoard();
+                gameBoard.resetBoard();
             }
             if (!gameBoard.isWin() && !gameBoard.isLose()) {
                 switch (line.charAt(0)) {
@@ -43,7 +33,12 @@ public class Main {
                         gameBoard.down();
                         break;
                 }
-                System.out.println("Score: " + gameBoard.getScore());
+                if (gameBoard.isWin()){
+                    System.out.println("You won!!!");
+                } else if (gameBoard.isLose()){
+                    System.out.println("You lost, try again with pressing r");
+                }
+                System.out.println("Score: " + gameBoard.getScore() + " High Score: " + gameBoard.getHighScore());
                 gameBoard.printBoard();
             }
         }

@@ -11,6 +11,7 @@ public class Board {
     private boolean win;
     private boolean lose;
     private int score;
+    private int highScore;
     private int[][] tiles;
 
     public Board(int x, int y){
@@ -21,9 +22,26 @@ public class Board {
         this.y = y;
         this.score = 0;
         this.tiles = new int[this.x][this.y];
+        addTile();
     }
 
-    public List<Integer[]> checkSpace(){
+    public void resetBoard(){
+        if(this.score > this.highScore){
+            this.highScore = this.score;
+        }
+        this.score = 0;
+        this.win = false;
+        this.lose = false;
+        for(int x = 0; x < this.x; x++){
+            for(int y = 0; y < this.y; y++){
+                tiles[x][y] = 0;
+            }
+        }
+        addTile();
+        System.out.println("up = e , left = s , down = d , right = f , restart game = r");
+    }
+
+    private List<Integer[]> checkSpace(){
         List<Integer[]> freeSpace = new ArrayList<Integer[]>(this.x *this.y);
         for(int x = 0; x < this.x; x++) {
             for (int y = 0; y < this.y; y++) {
@@ -36,11 +54,11 @@ public class Board {
         return freeSpace;
     }
 
-    public boolean isBoardFull(){
+    private boolean isBoardFull(){
         return checkSpace().size() == 0;
     }
 
-    public boolean movePossible(){
+    private boolean movePossible(){
         if (!isBoardFull()){
             return true;
         }
@@ -105,7 +123,7 @@ public class Board {
         return newTiles;
     }
 
-    public void addTile(){
+    private void addTile(){
         List<Integer[]> list = checkSpace();
         if(!list.isEmpty()){
             int i = (int) ((Math.random() * list.size()) % list.size());
@@ -115,7 +133,7 @@ public class Board {
         }
     }
 
-    public boolean compareLine(Integer[] line1, Integer[] line2){
+    private boolean compareLine(Integer[] line1, Integer[] line2){
         if(line1 == line2){
             return true;
         } else if (line1.length != line2.length){
@@ -129,7 +147,7 @@ public class Board {
         return true;
     }
 
-    public Integer[] moveLine(Integer[] line){
+    private Integer[] moveLine(Integer[] line){
         LinkedList<Integer> moveList = new LinkedList<Integer>();
         for (int x = 0; x < this.x; x++){
             if (line[x] != 0) {
@@ -148,7 +166,7 @@ public class Board {
         }
     }
 
-    public Integer[] mergeLine(Integer[] line){
+    private Integer[] mergeLine(Integer[] line){
         LinkedList<Integer> mergeList = new LinkedList<Integer>();
         for(int x = 0; x < this.x && line[x] != 0; x++) {
             int tileValue = line[x];
@@ -174,7 +192,7 @@ public class Board {
 
     }
 
-    public Integer[] getLine(int x){
+    private Integer[] getLine(int x){
         Integer[] line = new Integer[this.x];
         for(int y = 0; y < this.y; y++){
             line[y] = tiles[x][y];
@@ -182,7 +200,7 @@ public class Board {
         return line;
     }
 
-    public void setLine(int x, Integer[] line){
+    private void setLine(int x, Integer[] line){
         for(int y = 0; y < this.y; y++){
             tiles[x][y] = line[y];
         }
@@ -214,6 +232,10 @@ public class Board {
 
     public int getScore(){
         return this.score;
+    }
+
+    public int getHighScore() {
+        return highScore;
     }
 
     public void printBoard(){
