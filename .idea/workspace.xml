@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd53693a-9efe-4985-9254-accb11b3fa75" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/game/BoardTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Main.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -36,10 +31,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3506">
+            <state relative-caret-position="-318">
               <caret line="273" selection-start-line="273" selection-end-line="273" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -83,10 +78,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/game/BoardTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
+            <state relative-caret-position="1559">
               <caret line="140" column="35" selection-start-line="140" selection-start-column="35" selection-end-line="140" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -230,7 +225,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548332059824" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1548332839723" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../connectfour-core" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -355,14 +350,11 @@
       <workItem from="1548140058429" duration="8677000" />
       <workItem from="1548149050644" duration="15998000" />
       <workItem from="1548226346019" duration="22537000" />
-      <workItem from="1548312867854" duration="18881000" />
+      <workItem from="1548312867854" duration="19129000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="BoardTest_compareLineTest - 2019.01.24 at 12h 49m 10s.xml">
-      <configuration name="BoardTest.compareLineTest" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="BoardTest_compareLineTest - 2019.01.24 at 12h 49m 21s.xml">
       <configuration name="BoardTest.compareLineTest" configurationId="JUnit" />
     </history-entry>
@@ -390,9 +382,12 @@
     <history-entry file="BoardTest_addTileTest - 2019.01.24 at 13h 14m 21s.xml">
       <configuration name="BoardTest.addTileTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="BoardTest_addTileTest - 2019.01.24 at 13h 23m 30s.xml">
+      <configuration name="BoardTest.addTileTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114871000" />
+    <option name="totallyTimeSpent" value="115119000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1920" y="0" width="1920" height="1080" extended-state="6" />
@@ -414,7 +409,7 @@
       <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" weight="0.32983193" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" sideWeight="0.81323373" visible="true" weight="0.29516807" />
+      <window_info anchor="bottom" id="Run" order="7" sideWeight="0.81323373" weight="0.29516807" />
       <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.49893278" weight="0.46638656" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -484,6 +479,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/game/BoardTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1559">
+          <caret line="140" column="35" selection-start-line="140" selection-start-column="35" selection-end-line="140" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -496,7 +501,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3506">
+        <state relative-caret-position="-318">
           <caret line="273" selection-start-line="273" selection-end-line="273" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -514,16 +519,6 @@
             <element signature="e#9195#9196#0" expanded="true" />
             <element signature="e#9243#9244#0" expanded="true" />
             <element signature="e#9275#9276#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/game/BoardTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="140" column="35" selection-start-line="140" selection-start-column="35" selection-end-line="140" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
